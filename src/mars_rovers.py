@@ -16,8 +16,8 @@ class InvalidCoordinatesException(Exception):
 
 
 class InvalidInstructiosException(Exception):
-    def __init__(self, step):
-        self.msg = f'Invalid instructions cancelling/skipping further movement instructions'
+    def __init__(self):
+        self.msg = f'Invalid instructions - cancelling/skipping further movement'
 
 
 class MarsRover(object):
@@ -50,7 +50,7 @@ class MarsRover(object):
             elif step in ('L', 'R'):
                 self.change_direction(step)
             else:
-                raise InvalidInstructiosException(step)
+                raise InvalidInstructiosException()
 
     def _move_east(self):
         if self.x+1 <= self.bnd_x:
@@ -116,7 +116,7 @@ def main(test_data):
 @route('/<filename>')
 def server_static(filename):
     cwd = os.getcwd()
-    root = cwd + '\src\config'
+    root = cwd + '/config'
     print(root, static_file(filename, root=root))
     return static_file(filename, root=root)
 
@@ -135,7 +135,6 @@ def formhandler():
     tpl = templates.tpl_start + templates.tpl_form_cmp.format(res_tag=ppl) \
           + templates.tpl_end
     return tpl
-
 
 
 if __name__ == '__main__':

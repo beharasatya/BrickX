@@ -140,7 +140,7 @@ def formhandler():
 if __name__ == '__main__':
     if os.path.isfile('/sys/hypervisor/uuid') \
             and 'ec2' in subprocess.check_output(['head', '-1', '/sys/hypervisor/uuid']).decode():
-        host = subprocess.check_output(['curl' 'http://169.254.169.254/latest/meta-data/public-hostname']).decode()
+        host = subprocess.check_output(['curl', 'http://169.254.169.254/latest/meta-data/public-hostname']).decode()
         run(server='auto', host=host, port=8080)
     else:
         run()

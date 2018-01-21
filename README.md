@@ -2,9 +2,17 @@
 MARS ROVERS
 
 
+The program checks if the input is valid 
+  - 2 integers in the first line for the boundaries
+  - 2 lines for each rover to be tested 
+  
+ and gives appropriate error message if any invalid input is provided.
  
- Problem Statement:
- A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This plateau,
+ If the input is valid, it gives one line output per rover - the rover's final position
+ 
+ 
+
+A squad of robotic rovers are to be landed by NASA on a plateau on Mars. This plateau,
 which is curiously rectangular, must be navigated by the rovers so that their on-board
 cameras can get a complete view of the surrounding terrain to send back to Earth.
 A rover's position and location is represented by a combination of x and y co-ordinates and a
@@ -41,15 +49,4 @@ Expected Output:
 ==========
 
 
- 
-
-
-The program checks if the input is valid 
-  - 2 integers in the first line for the boundaries
-  - 2 lines for each rover to be tested 
-  
- and gives appropriate error message if any invalid input is provided.
- 
- If the input is valid, it gives one line output per rover - the rover's final position
- 
  
